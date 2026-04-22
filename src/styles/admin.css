@@ -1,0 +1,90 @@
+.admin-wrap {
+  max-width: 1100px; margin: 0 auto; padding: 32px 20px;
+}
+.admin-nav {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 12px;
+}
+.admin-nav button {
+  padding: 8px 16px;
+  border: 1px solid var(--color-border);
+  background: #fff; border-radius: 4px;
+  color: var(--color-text);
+}
+.admin-nav button.active {
+  background: var(--color-primary); color: #fff; border-color: var(--color-primary);
+}
+
+.admin-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 16px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid var(--color-border);
+}
+.admin-table th, .admin-table td {
+  padding: 12px; text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 14px;
+  vertical-align: top;
+}
+.admin-table th { background: #fafafa; font-weight: 600; }
+.admin-table img { max-height: 60px; width: auto; }
+
+.admin-form {
+  background: #fff; border: 1px solid var(--color-border); border-radius: 6px;
+  padding: 20px; margin-top: 16px;
+  display: grid; gap: 14px;
+}
+.admin-form label {
+  display: flex; flex-direction: column; gap: 6px;
+  font-size: 13px; color: var(--color-muted);
+}
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-family: inherit; font-size: 14px;
+  background: #fff; color: var(--color-text);
+}
+.admin-form textarea { min-height: 80px; resize: vertical; }
+.admin-form .row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+}
+@media (max-width: 800px) { .admin-form .row { grid-template-columns: 1fr; } }
+
+.admin-actions { display: flex; gap: 8px; }
+.admin-actions button {
+  padding: 6px 12px; font-size: 13px;
+  border: 1px solid var(--color-border); background: #fff; border-radius: 4px;
+}
+.admin-actions button.danger { border-color: #d14; color: #d14; }
+.admin-actions button.primary { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
+
+.login-wrap {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--color-bg-soft);
+}
+.login-card {
+  background: #fff; padding: 32px; border-radius: 8px;
+  width: min(400px, 90vw);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.login-card h1 { margin: 0 0 20px; text-align: center; color: var(--color-primary); }
+.login-card label { display: block; margin-bottom: 14px; font-size: 13px; color: var(--color-muted); }
+.login-card input {
+  width: 100%; padding: 10px 12px;
+  border: 1px solid var(--color-border); border-radius: 4px;
+  font-size: 14px; margin-top: 4px;
+}
+.login-card .error { color: #d14; font-size: 13px; margin-bottom: 10px; }
